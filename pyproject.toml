@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "npu-agent"
+version = "0.1.0"
+description = "Standalone Ascend NPU task scheduling server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+npu = []
+dev = [
+    "pytest>=7.0.0",
+]
+all = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+npu-server = "server.npu.cli:cli_main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["server*"]
+
+[tool.setuptools.package-data]
+"server.npu.configs" = ["**/*.yml", "**/*.yaml"]
+"llm_trans.config" = ["*.yaml"]
+
+[project.urls]
+Homepage = "https://github.com/mmt-at/npu-agent"
+Repository = "https://github.com/mmt-at/npu-agent"
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

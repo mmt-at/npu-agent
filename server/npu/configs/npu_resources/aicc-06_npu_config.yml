@@ -1,0 +1,52 @@
+# Auto-generated NPU configuration
+# Generated: 2026-03-09 10:22:29
+# Total NPUs: 4
+# Hostname: aicc-06
+
+npus:
+  - logical_id: 4
+    npu_smi_id: 4
+    visible_id: 4
+    name: "910B1"
+    uuid: ""
+    memory_gb: 64.0
+    enabled: true
+    default_mode: "shared"
+    memory_threshold: 1.0
+    max_concurrent_tasks: 2
+
+  - logical_id: 5
+    npu_smi_id: 5
+    visible_id: 5
+    name: "910B1"
+    uuid: ""
+    memory_gb: 64.0
+    enabled: true
+    default_mode: "shared"
+    memory_threshold: 1.0
+    max_concurrent_tasks: 2
+
+  - logical_id: 6
+    npu_smi_id: 6
+    visible_id: 6
+    name: "910B1"
+    uuid: ""
+    memory_gb: 64.0
+    enabled: true
+    default_mode: "shared"
+    memory_threshold: 1.0
+    max_concurrent_tasks: 2
+
+  - logical_id: 7
+    npu_smi_id: 7
+    visible_id: 7
+    name: "910B1"
+    uuid: ""
+    memory_gb: 64.0
+    enabled: true
+    default_mode: "shared"
+    memory_threshold: 1.0
+    max_concurrent_tasks: 2
+
+server:
+  auto_register_npus: true
